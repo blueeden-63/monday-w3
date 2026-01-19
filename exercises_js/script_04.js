@@ -24,7 +24,16 @@ let seventies = entrepreneurs.filter(entrepreneurs =>entrepreneurs.year >= 1970 
 console.log(seventies);
 
 // Sors une array qui contient le prénom et le nom des entrepreneurs
-let names = entrepreneurs.map(entrepreneurs => entrepreneurs.first +" " + entrepreneurs.last)
+let names = entrepreneurs.map(entrepreneurs => entrepreneurs.first + "  " + entrepreneurs.last)
 console.log(names)
 
 // Quel âge aurait chaque inventeur aujourd'hui ?
+//modifier mon tableau plus précisement year année actuel - year
+// Aujourd'hui bidule aurait ...
+let today = new Date(Date.now()).getFullYear();
+let ages = entrepreneurs.map(entrepreneurs => "Aujourd'hui " +  entrepreneurs.first + "  " + entrepreneurs.last + " aurait " +  (today - entrepreneurs.year)); 
+console.log(ages)
+
+//Trie les entrepreneurs par ordre alphabétique du nom de famille.
+let sort_last = entrepreneurs.sort((a, b) => a.last.localeCompare(b.last))
+console.log(sort_last)
