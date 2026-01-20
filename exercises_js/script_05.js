@@ -16,7 +16,7 @@ const books = [
 //Quel est livre le plus emprunté ?
 //Quel est le livre le moins emprunté ?
 //Trouve le livre avec l'ID: 873495
-finder = books.find(books => books.id = 873495);
+let finder = books.find(books => books.id = 873495);
 console.log(finder)
 //Supprime le livre avec l'ID: 133712
 
